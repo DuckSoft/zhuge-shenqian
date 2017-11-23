@@ -14,6 +14,9 @@ let app = new Vue({
             ) : (
                 "您似乎并没有输入汉字！"
             );
+        },
+        clearInput: function() {
+            this.user_input = "";
         }
     }
 });

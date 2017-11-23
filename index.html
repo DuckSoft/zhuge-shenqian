@@ -7,8 +7,9 @@
 </head>
 <body>
 <div id="app">
-    <input id="words" placeholder="输入你要测的字" maxlength="32" />
-    <input type="button" value="点我抽签" onclick="goQian();"/>
+    <p>测字建议至少三个字。</p>
+    <input id="words" placeholder="请随心写几个字" maxlength="32" minlength="3" /><br/>
+    <input type="button" value="点我测字" onclick="goQian();"/><input type="button" value="直接求签" onclick="goQiu();"/>
     <hr/>
     <span id="result">
         （此处显示结果）

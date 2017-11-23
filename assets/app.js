@@ -445,3 +445,7 @@ function goQian() {
         )
     );
 }
+
+function goQiu() {
+    document.getElementById("result").innerText = qian[Math.floor(Math.random()*384)]
+}

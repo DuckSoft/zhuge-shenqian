@@ -2,20 +2,49 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>诸葛神签</title>
-    <script src="assets/app.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap.min.css"/>
 </head>
 <body>
-<div id="app">
-    <p>建议：测字至少三个字！</p>
-    <input id="words" placeholder="请随心写几个字" maxlength="32" minlength="3" /><br/>
-    <input type="button" value="点我测字" onclick="goQian();"/><input type="button" value="直接求签" onclick="goQiu();"/>
-    <hr/>
-    <span id="result">
-        （此处显示结果）
-    </span>
-    <hr/>
-    <small>Copyleft 2017 <a href="https://github.com/DuckSoft/">DuckSoft</a>. 仅供娱乐！</small>
-</div>
+    <div class="container" id="app">
+        <div class="page-header">
+            <h2>诸葛神签</h2>
+        </div>
+        <div class="col-lg-7 col-md-10 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>诸葛神签</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="form-control-static" for="input">请在下面输入测字内容（汉字）：</label>
+                        <input class="form-control" v-model="user_input" id="input" placeholder="例：卧槽尼玛" type="text" maxlength="32" minlength="3" class="validate">
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                        <button class="btn btn-primary form-control" v-on:click="getSpecific">测字求签</button>
+                        </div>
+                        <div class="col-xs-6">
+                        <button class="btn btn-info form-control" v-on:click="getRandom">随缘求签</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <span class="text-primary">{{result}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="text-center text-muted">
+            <small>Copyleft 2017 <a target="_blank" href="https://github.com/DuckSoft/">DuckSoft</a>. 仅供娱乐！</small>
+        </footer>
+    </div>
 </body>
+<script src="assets/vue.min.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/app.js"></script>
 </html>

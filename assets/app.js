@@ -1,4 +1,4 @@
-let app = new Vue({
+app = new Vue({
     el: "#app",
     data: {
         user_input: "",
